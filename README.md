@@ -1,123 +1,85 @@
 
-# PyScript Local Runtime Downloader & Web App
+```markdown
+# My PyScript Local Runtime Project (Personal Use)
 
-This project sets up a **local PyScript runtime environment** by downloading all required Pyodide and PyScript files, and provides a front-end web interface that can function like a weather-style browser extension or local HTML app.
-
----
-
-## 🚀 Features
-
-- 📦 Downloads latest PyScript & Pyodide files locally
-- 📄 Includes `setup.py` for automated download
-- 🌐 Contains a PyScript-based `index.html` front-end
-- 🧩 Chrome Extension support via `manifest.json`
-- 🖼️ UI icon included (`popup.png`)
-- 📝 Logs all downloads in `setup.log`
+This is my personal project to run PyScript locally by downloading all the required Pyodide and PyScript files. It also includes an HTML file and optional Chrome extension setup with popup UI.
 
 ---
 
-## 📁 Project Structure
+## ✅ What I Did
+
+- Created a Python script `setup.py` to download all required files from the internet.
+- Saved them inside the `runtime/` folder.
+- Added an `index.html` to use PyScript locally.
+- Included `manifest.json` and `popup.png` in case I want to test this as a Chrome Extension.
+
+---
+
+## 📁 Folder Overview
 
 ```
 
 pyscript-local-runtime/
 │
 ├── runtime/
-│   ├── \[Downloaded Pyodide & PyScript files]
-│   ├── setup.py           # Python script to download runtime files
-│   ├── setup.log          # Logs the download results
-│   └── ...
+│   ├── setup.py          # Downloads PyScript and Pyodide files
+│   ├── setup.log         # Logs success or errors from the download
+│   ├── \[downloaded JS/WASM/WHL files]
 │
-├── index.html             # Main HTML app using PyScript
-├── main.py                # Optional PyScript Python code
-├── finished.js            # Optional JS logic after load
-├── manifest.json          # Chrome extension manifest
-├── popup.png              # Icon for the extension
-└── README.md              # This file
+├── index.html            # Main PyScript HTML interface
+├── main.py               # PyScript Python code (optional)
+├── finished.js           # JS logic (optional, for after loading)
+├── manifest.json         # For Chrome extension (optional)
+├── popup.png             # Icon for extension popup
+└── README.md             # This file (for me)
 
 ````
 
 ---
 
-## 🔧 Requirements
+## 🔧 How I Run It
 
-- Python 3.7+
-- `requests` library
+### 1. Download Runtime Files
 
-Install with:
-
-```bash
-pip install requests
-````
-
----
-
-## ⚙️ How to Run
-
-### 1. 📥 Download PyScript Runtime
-
-From the root directory:
+I open a terminal and run:
 
 ```bash
 cd runtime
 python setup.py
-```
+````
 
-All required files (JS, WASM, TAR, etc.) will be downloaded locally to the `runtime` folder.
-
----
-
-### 2. 🌐 Run the App in Browser
-
-Open `index.html` in any modern browser:
-
-```bash
-# Optionally use Live Server for auto-reload
-Right-click > Open with Live Server (VS Code)
-```
+This creates or updates the downloaded files and logs everything in `setup.log`.
 
 ---
 
-### 3. 🧩 Load as Chrome Extension (Optional)
+### 2. View My App
 
-1. Open Chrome and go to `chrome://extensions/`
-2. Enable **Developer Mode**
-3. Click **“Load unpacked”**
-4. Select the project root folder
-5. The extension will appear with your `popup.png` icon
+I open `index.html` in the browser, or right-click it in VS Code and use **Live Server**.
 
 ---
 
-## 📜 Logs
+### 3. Test Chrome Extension (Optional)
 
-All download logs are saved in:
+If I want to load this as a browser extension:
 
-```
-runtime/setup.log
-```
+* Go to `chrome://extensions/`
+* Turn on "Developer Mode"
+* Click “Load unpacked”
+* Choose the root project folder
 
-You can inspect this for download status and errors.
-
----
-
-## 📸 Screenshot
-
-![Popup Preview](popup.png)
+It shows a popup using the `popup.png` icon and can load the HTML.
 
 ---
 
-## 🧠 Credits
+## 💬 Notes 
 
-* [PyScript](https://pyscript.net)
-* [Pyodide](https://pyodide.org)
-* CDN via [jsDelivr](https://www.jsdelivr.com/)
+* If anything fails, check `setup.log` in the `runtime/` folder.
+* I can add more `.whl` or `.tar` packages to download by editing the `downloads` list in `setup.py`.
+* If I update the version of Pyodide or PyScript, I must change the URLs in `setup.py`.
 
 ---
 
-## 🛡️ License
+## ✅ Status
 
-License – use freely, modify, and share.
-
-```
-
+Everything works locally. Setup script runs without error, files are downloaded, and PyScript loads fine in `index.html`.
 
