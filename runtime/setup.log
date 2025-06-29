@@ -1,0 +1,15 @@
+2025-06-29 14:05:30,871 - INFO - Setup started
+2025-06-29 14:05:31,159 - ERROR - Failed to download: pyscript.js
+404 Client Error: Not Found for url: https://pyscript.net/latest/pyscript.js
+2025-06-29 14:05:32,122 - ERROR - Failed to download: pyscript.css
+404 Client Error: Not Found for url: https://pyscript.net/latest/pyscript.css
+2025-06-29 14:05:32,622 - INFO - Downloaded: pyodide.js
+2025-06-29 14:05:33,169 - INFO - Downloaded: pyodide_py.tar
+2025-06-29 14:05:34,081 - INFO - Downloaded: pyodide.asm.js
+2025-06-29 14:05:37,268 - INFO - Downloaded: pyodide.asm.data
+2025-06-29 14:05:37,675 - INFO - Downloaded: repodata.json
+2025-06-29 14:05:40,431 - INFO - Downloaded: pyodide.asm.wasm
+2025-06-29 14:05:41,031 - INFO - Downloaded: packaging-21.3-py3-none-any.whl
+2025-06-29 14:05:41,878 - INFO - Downloaded: distutils.tar
+2025-06-29 14:05:42,405 - INFO - Downloaded: micropip-0.1-py3-none-any.whl
+2025-06-29 14:05:43,128 - INFO - Downloaded: pyparsing-3.0.9-py3-none-any.whl
